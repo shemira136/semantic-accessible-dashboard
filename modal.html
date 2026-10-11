@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Modal Dialog | AccessBoard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <h1>Accessible Modal Dialog</h1>
+        <p>Keyboard-Friendly Interactive Components</p>
+    </header>
+
+    <nav class="top-navigation" aria-label="Main navigation">
+        <a href="index.html">Overview</a>
+        <a href="components.html">Components</a>
+        <a href="forms.html">Forms</a>
+        <a href="tables.html">Data Tables</a>
+        <a href="modal.html" aria-current="page">Modal Dialog</a>
+    </nav>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar" aria-label="Modal information">
+            <h2>Modal Features</h2>
+            <ul>
+                <li>Keyboard interaction</li>
+                <li>Accessible title</li>
+                <li>Focus management</li>
+                <li>Close button</li>
+            </ul>
+        </aside>
+
+        <main id="main-content" tabindex="-1">
+
+            <section aria-labelledby="modal-section-title">
+
+                <h2 id="modal-section-title">
+                    Interactive Dialog Demonstration
+                </h2>
+
+                <p>
+                    Select the button below to open a dialog.
+                    You can close it using the close button or
+                    the Escape key.
+                </p>
+
+                <button type="button" id="open-modal">
+                    Open Accessibility Dialog
+                </button>
+
+                <dialog
+                    id="accessible-modal"
+                    aria-labelledby="modal-title"
+                    aria-describedby="modal-description"
+                >
+
+                    <h2 id="modal-title">
+                        Accessibility Information
+                    </h2>
+
+                    <p id="modal-description">
+                        This dialog demonstrates the native HTML
+                        dialog element, which provides built-in
+                        keyboard support and modal behavior.
+                    </p>
+
+                    <p>
+                        Accessible dialogs should have a clear title,
+                        a predictable closing mechanism, and appropriate
+                        keyboard focus management.
+                    </p>
+
+                    <button type="button" id="close-modal">
+                        Close Dialog
+                    </button>
+
+                </dialog>
+
+            </section>
+
+            <section aria-labelledby="guidelines-title">
+
+                <h2 id="guidelines-title">
+                    Modal Accessibility Guidelines
+                </h2>
+
+                <article>
+                    <h3>Keyboard Access</h3>
+                    <p>
+                        Users should be able to operate the dialog
+                        without using a mouse.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Dialog Name</h3>
+                    <p>
+                        The dialog has an accessible name through
+                        its heading.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Focus Management</h3>
+                    <p>
+                        When the dialog closes, focus should return
+                        to the button that opened it.
+                    </p>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>AccessBoard — Accessible Modal Demonstration</p>
+    </footer>
+
+</body>
+</html>
