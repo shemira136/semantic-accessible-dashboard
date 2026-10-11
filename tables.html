@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Data Tables | AccessBoard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <h1>Accessible Data Tables</h1>
+        <p>Structured Data Presentation</p>
+    </header>
+
+    <nav class="top-navigation" aria-label="Main navigation">
+        <a href="index.html">Overview</a>
+        <a href="components.html">Components</a>
+        <a href="forms.html">Forms</a>
+        <a href="tables.html" aria-current="page">Data Tables</a>
+        <a href="modal.html">Modal Dialog</a>
+    </nav>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar" aria-label="Table navigation">
+            <h2>Table Sections</h2>
+            <ul>
+                <li><a href="#projects">Project status</a></li>
+                <li><a href="#guidelines">Accessibility guidelines</a></li>
+            </ul>
+        </aside>
+
+        <main id="main-content" tabindex="-1">
+
+            <section id="projects" aria-labelledby="projects-title">
+
+                <h2 id="projects-title">Project Status</h2>
+
+                <p>
+                    This example demonstrates an accessible table
+                    with column headings and row headings.
+                </p>
+
+                <div class="table-container">
+
+                    <table>
+                        <caption>Example accessibility project tasks</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Task ID</th>
+                                <th scope="col">Component</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">001</th>
+                                <td>Semantic HTML</td>
+                                <td>Structure page content</td>
+                                <td>Completed</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">002</th>
+                                <td>Accessible Forms</td>
+                                <td>Support accessible data entry</td>
+                                <td>Completed</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">003</th>
+                                <td>Data Tables</td>
+                                <td>Organize structured information</td>
+                                <td>In progress</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">004</th>
+                                <td>Modal Dialog</td>
+                                <td>Demonstrate accessible interaction</td>
+                                <td>Planned</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <section id="guidelines"
+                     aria-labelledby="guidelines-title">
+
+                <h2 id="guidelines-title">
+                    Accessible Table Guidelines
+                </h2>
+
+                <article>
+                    <h3>Table Caption</h3>
+                    <p>
+                        The caption describes the purpose of the table.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Column Headings</h3>
+                    <p>
+                        The scope attribute identifies column headings.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Row Headings</h3>
+                    <p>
+                        Row headings help identify each data record.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Responsive Presentation</h3>
+                    <p>
+                        The table container allows horizontal scrolling
+                        on narrow screens when necessary.
+                    </p>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>AccessBoard — Accessible
