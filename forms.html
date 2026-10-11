@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Forms | AccessBoard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <h1>Accessible Forms</h1>
+        <p>Form Controls and Validation</p>
+    </header>
+
+    <nav class="top-navigation" aria-label="Main navigation">
+        <a href="index.html">Overview</a>
+        <a href="components.html">Components</a>
+        <a href="forms.html" aria-current="page">Forms</a>
+        <a href="tables.html">Data Tables</a>
+        <a href="modal.html">Modal Dialog</a>
+    </nav>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar" aria-label="Form navigation">
+            <h2>Form Sections</h2>
+            <ul>
+                <li><a href="#profile">Profile form</a></li>
+                <li><a href="#guidelines">Accessibility guidelines</a></li>
+            </ul>
+        </aside>
+
+        <main id="main-content" tabindex="-1">
+
+            <section id="profile" aria-labelledby="profile-title">
+
+                <h2 id="profile-title">Profile Information</h2>
+
+                <p>
+                    Complete this demonstration form.
+                    Fields marked required must be completed.
+                </p>
+
+                <form id="accessible-form">
+
+                    <fieldset>
+                        <legend>Personal Details</legend>
+
+                        <div>
+                            <label for="full-name">Full name (required)</label>
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="fullName"
+                                autocomplete="name"
+                                required
+                                aria-describedby="name-help"
+                            >
+                            <p id="name-help">
+                                Enter your first and last name.
+                            </p>
+                        </div>
+
+                        <div>
+                            <label for="email">Email address (required)</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="role">Project role</label>
+                            <select id="role" name="role">
+                                <option value="">Select a role</option>
+                                <option value="student">Student</option>
+                                <option value="developer">Developer</option>
+                                <option value="designer">Designer</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Accessibility Preferences</legend>
+
+                        <p>Which features are useful to you?</p>
+
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="keyboard"
+                                name="preferences"
+                                value="keyboard"
+                            >
+                            <label for="keyboard">
+                                Keyboard navigation
+                            </label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="checkbox"
+                                id="contrast"
+                                name="preferences"
+                                value="contrast"
+                            >
+                            <label for="contrast">
+                                High contrast
+                            </label>
+                        </div>
+
+                        <div>
+                            <label for="comments">
+                                Additional comments
+                            </label>
+                            <textarea
+                                id="comments"
+                                name="comments"
+                                rows="4"
+                                maxlength="500"
+                                aria-describedby="comments-help"
+                            ></textarea>
+                            <p id="comments-help">
+                                Optional. Maximum 500 characters.
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Validate Form</button>
+
+                    <p
+                        id="form-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </section>
+
+            <section id="guidelines" aria-labelledby="guidelines-title">
+
+                <h2 id="guidelines-title">Accessibility Guidelines</h2>
+
+                <article>
+                    <h3>Labels</h3>
+                    <p>
+                        Each input has a visible label associated with
+                        its control.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Grouping</h3>
+                    <p>
+                        Fieldset and legend elements group related
+                        form controls.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Validation</h3>
+                    <p>
+                        Required fields and input types provide
+                        built-in browser validation.
+                    </p>
+                </article>
+
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>AccessBoard — Accessible Form Demonstration</p>
+    </footer>
+
+</body>
+</html>
