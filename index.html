@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessibility Dashboard</title>
+
+    <meta
+        name="description"
+        content="An enterprise dashboard demonstrating semantic HTML5
+        and accessible component architecture."
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="site-header">
+        <div class="brand">
+            <h1>AccessBoard</h1>
+            <p>Semantic HTML5 &amp; Accessibility</p>
+        </div>
+
+        <div class="user-info">
+            <span>Project Dashboard</span>
+        </div>
+    </header>
+
+    <nav class="top-navigation" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="components.html">Components</a>
+        <a href="forms.html">Forms</a>
+        <a href="tables.html">Data Tables</a>
+        <a href="modal.html">Modal Dialog</a>
+    </nav>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar" aria-label="Dashboard sidebar">
+            <h2>Workspace</h2>
+
+            <nav aria-label="Dashboard sections">
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#metrics">Key metrics</a></li>
+                    <li><a href="#accessibility">Accessibility</a></li>
+                    <li><a href="#activity">Recent activity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content" tabindex="-1">
+
+            <section id="overview" aria-labelledby="overview-title">
+                <h2 id="overview-title">Dashboard Overview</h2>
+
+                <p>
+                    Welcome to AccessBoard, an educational demonstration
+                    of semantic HTML5 and accessible interface architecture.
+                </p>
+            </section>
+
+            <section id="metrics" aria-labelledby="metrics-title">
+                <h2 id="metrics-title">Key Metrics</h2>
+
+                <div class="card-grid">
+
+                    <article class="dashboard-card">
+                        <h3>Components</h3>
+                        <p class="metric">05</p>
+                        <p>Accessible interface categories</p>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <h3>Semantic Structure</h3>
+                        <p class="metric">HTML5</p>
+                        <p>Meaningful document landmarks</p>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <h3>Accessibility Goal</h3>
+                        <p class="metric">WCAG 2.1</p>
+                        <p>Targeting Level AA practices</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="accessibility"
+                     aria-labelledby="accessibility-title">
+
+                <h2 id="accessibility-title">
+                    Accessibility Principles
+                </h2>
+
+                <article>
+                    <h3>Perceivable</h3>
+                    <p>
+                        Present information in ways users can perceive,
+                        including appropriate text alternatives.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Operable</h3>
+                    <p>
+                        Ensure interactive elements can be operated
+                        using a keyboard.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Understandable</h3>
+                    <p>
+                        Use clear labels, predictable navigation
+                        and helpful validation messages.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Robust</h3>
+                    <p>
+                        Use valid semantic HTML and appropriate
+                        accessibility attributes.
+                    </p>
+                </article>
+
+            </section>
+
+            <section id="activity" aria-labelledby="activity-title">
+                <h2 id="activity-title">Recent Activity</h2>
+
+                <div class="table-container">
+                    <table>
+                        <caption>Example dashboard activities</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Component</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Navigation</th>
+                                <td>Page navigation</td>
+                                <td>Implemented</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Forms</th>
+                                <td>Accessible data entry</td>
+                                <td>Planned</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Modal</th>
+                                <td>Focused interaction</td>
+                                <td>Planned</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 AccessBoard |
+            Semantic HTML5 and Accessibility Project
+        </p>
+    </footer>
+
+</body>
+</html>
