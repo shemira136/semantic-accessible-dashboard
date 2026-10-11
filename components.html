@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Components | AccessBoard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <h1>Accessible Components</h1>
+        <p>Semantic HTML5 Component Architecture</p>
+    </header>
+
+    <nav class="top-navigation" aria-label="Main navigation">
+        <a href="index.html">Overview</a>
+        <a href="components.html" aria-current="page">Components</a>
+        <a href="forms.html">Forms</a>
+        <a href="tables.html">Data Tables</a>
+        <a href="modal.html">Modal Dialog</a>
+    </nav>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" aria-label="Component information">
+            <h2>Components</h2>
+            <ul>
+                <li><a href="#semantic">Semantic structure</a></li>
+                <li><a href="#landmarks">Page landmarks</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+            </ul>
+        </aside>
+
+        <main id="main-content" tabindex="-1">
+            <section id="semantic" aria-labelledby="semantic-title">
+                <h2 id="semantic-title">Semantic HTML5</h2>
+
+                <p>
+                    Semantic HTML describes the meaning and purpose
+                    of content rather than just its appearance.
+                </p>
+
+                <article>
+                    <h3>Header</h3>
+                    <p>Introduces a page or a section.</p>
+                </article>
+
+                <article>
+                    <h3>Navigation</h3>
+                    <p>The nav element identifies a major group of navigation links.</p>
+                </article>
+
+                <article>
+                    <h3>Main content</h3>
+                    <p>The main element identifies the primary content of the page.</p>
+                </article>
+
+                <article>
+                    <h3>Section and Article</h3>
+                    <p>
+                        Sections group related content. Articles represent
+                        self-contained content.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Aside</h3>
+                    <p>Provides related content, such as a sidebar.</p>
+                </article>
+
+                <article>
+                    <h3>Footer</h3>
+                    <p>Provides information about a page or section.</p>
+                </article>
+            </section>
+
+            <section id="landmarks" aria-labelledby="landmarks-title">
+                <h2 id="landmarks-title">Page Landmarks</h2>
+
+                <p>
+                    Landmarks help assistive technology users navigate
+                    between major regions of a web page.
+                </p>
+
+                <ul>
+                    <li>Banner: site header</li>
+                    <li>Navigation: primary navigation</li>
+                    <li>Main: primary page content</li>
+                    <li>Complementary: sidebar</li>
+                    <li>Content information: page footer</li>
+                </ul>
+            </section>
+
+            <section id="accessibility"
+                     aria-labelledby="accessibility-title">
+                <h2 id="accessibility-title">Accessibility Principles</h2>
+
+                <article>
+                    <h3>Keyboard accessibility</h3>
+                    <p>Interactive controls should be usable with a keyboard.</p>
+                </article>
+
+                <article>
+                    <h3>Visible focus</h3>
+                    <p>Users should be able to identify the focused control.</p>
+                </article>
+
+                <article>
+                    <h3>Accessible names</h3>
+                    <p>
+                        Buttons and form controls should have meaningful
+                        accessible names.
+                    </p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>Semantic HTML5 and Accessibility Project</p>
+    </footer>
+</body>
+</html>
